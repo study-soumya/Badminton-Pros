@@ -65,6 +65,7 @@ To get started with Badminton Pros and experience the world of online badminton 
 
 ```bash
 git clone https://github.com/study-soumya/Badminton-Pros.git
+cd Badminton-Pros
 ```
 
 ## Create Virtual Environment
