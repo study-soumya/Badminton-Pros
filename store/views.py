@@ -61,7 +61,14 @@ def product_detail(request, category_slug, product_slug):
     
     # Get the product gallery
     product_gallery = ProductGallery.objects.filter(product_id=single_product.id)
-    userprofile = UserProfile.objects.get(user_id=request.user.id)
+
+    if request.user.is_authenticated:
+        try:
+            userprofile = UserProfile.objects.get(user_id=request.user.id)
+        except UserProfile.DoesNotExist:
+            userprofile = None
+    else:
+        userprofile = None
 
     
     context = {
