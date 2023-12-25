@@ -22,7 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     # path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
-    path('secure_badmintonpros_admin/', admin.site.urls),
+    path('secure_badminton-pros_admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('store/', include('store.urls')),
     path('cart/', include('carts.urls')),
